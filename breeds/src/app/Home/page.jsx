@@ -25,7 +25,7 @@ export default function Home() {
                 <p><strong>Docentes:</strong>Thiago Ferreira e Marcelo Carboni</p>
                 
                 <blockquote className={styles.frase}>
-                    "A persistência é o caminho do êxito." – Charles Chaplin
+                   "Não se preocupe em entender. Viver ultrapassa qualquer entendimento." – Charles Chaplin
                 </blockquote>
             </div>
             <Link href="/Dogs" className={styles.button}>
