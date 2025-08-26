@@ -1,7 +1,11 @@
+import React from "react";
 import "./globals.css";
 
 export const metadata = {
-  title: "Breeds of Dog",
+  title: "Latido & Lambida",
+  icons: {
+    icon:"/icon/favicon.ico"
+  },
   description: "Descubra diversas raças de cachorro e suas características.",
 };
 

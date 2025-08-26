@@ -39,12 +39,14 @@ export default function Home() {
                     <div key={cachorro.id} className={styles.card}>
                         <h3 className={styles.cardTitle}>{cachorro.name}</h3>
                         <img src={`https://cdn2.thedogapi.com/images/${cachorro.reference_image_id}.jpg`} alt={cachorro.name} className={styles.cardImage} />
-                        <p className={styles.cardInfo}>ID: {cachorro.id}</p>
+                        <div className={styles.cardText}>
+                        <p className={styles.cardInfo}>Id: {cachorro.id}</p>
                         <p className={styles.cardInfo}>Grupo: {cachorro.breed_group}</p>
                         <p className={styles.cardInfo}>Origem: {cachorro.origin}</p>
                         <p className={styles.cardInfo}>Finalidade: {cachorro.bred_for}</p>
                         <p className={styles.cardInfo}>Expectativa de vida: {cachorro.life_span}</p>
                         <p className={styles.cardInfo}>Temperamento: {cachorro.temperament}</p>
+                        </div>
                     </div>
                 ))}
             </div>
