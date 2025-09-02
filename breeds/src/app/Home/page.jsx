@@ -6,31 +6,41 @@ import Image from "next/image";
 export default function Home() {
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>Welcome to my Profile</h1>
-            <div className={styles.card}>
-                <p><strong> 2TDS1 - SENAI</strong></p>
-                <div className={styles.profile}>
-                    <Image
-                        src="/images/eu.jpg"
-                        alt="Minha foto"
-                        width={120}
-                        height={120}
-                        className={styles.avatar}
-                    />
-                </div>
-                <p style={{fontSize: "20px", marginBottom: "24px"}}>
-                    Olá, eu me chamo <strong>Anna Beatriz Ribeiro Valentim</strong>, estou no meu <strong>último ano da escola</strong>, e estou terminando o curso de <strong>Desenvolvimento de Sistemas no Senai</strong>.
-                </p>
-                
-                <p><strong>Docentes:</strong>Thiago Ferreira e Marcelo Carboni</p>
-                
-                <blockquote className={styles.frase}>
-                   "Não se preocupe em entender. Viver ultrapassa qualquer entendimento." – Charles Chaplin
-                </blockquote>
+        <header className={styles.header}>
+            <div className={styles.containerheader}>
+                <h1 className={styles.title}>Latido e Lambida</h1>
+                <Image src="/icon/faviconn.ico" alt="Latido e Lambida" width={40} height={40} />
             </div>
-            <Link href="/Dogs" className={styles.button}>
-                Ver Raças de Cachorros 
-            </Link>
+        <nav className={styles.nav}>
+            <Link href="/Dogs" className={styles.navLink}>Cachorros</Link>
+            <Link href="/Racas" className={styles.navLink}>Raças</Link>
+            <Link href="/Apiinfo" className={styles.navLink}>Informações</Link>
+        </nav>
+        </header>
+        <section className={styles.profile}>
+        <div className={styles.profileimage}>
+            <Image src="/images/eu.jpg" alt="Cachorro feliz" width={220} height={220} className={styles.avatar} />
         </div>
+        <div className={styles.profiletext}>
+            <h2 className={styles.profiletitle}>Descubra tudo sobre raças de cachorros!</h2>
+            <p className={styles.profileSubtitle}>
+            Curiosidades, informações, dicas e muito mais para quem ama cães. Navegue, aprenda e compartilhe o amor pelos peludos!
+            </p>
+            <Link href="/Dogs" className={styles.profileButton}>Explorar Raças</Link>
+        </div>
+        </section>
+        <section className={styles.infocontainer}>
+        <h3 className={styles.infoTitle}>Sobre o projeto</h3>
+        <p className={styles.infoText}>
+            O Latido e Lambida é um espaço dedicado para apaixonados por cachorros. Aqui você encontra informações sobre raças, cuidados, curiosidades e dicas para tornar a vida do seu melhor amigo ainda mais feliz!
+        </p>
+        <blockquote className={styles.frase}>
+            "Não se preocupe em entender. Viver ultrapassa qualquer entendimento." – Charles Chaplin
+        </blockquote>
+        </section>
+        <footer className={styles.footer}>
+        <span>© 2025 Latido e Lambida • By Anna Beatriz</span>
+        </footer>
+    </div>
     );
 }
