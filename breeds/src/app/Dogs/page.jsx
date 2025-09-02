@@ -33,6 +33,7 @@ export default function Home() {
             <div className={styles.cardContainer}>
                 {cachorros.map((cachorro) => (
                     <div key={cachorro.id} className={styles.cardDog}>
+                        //arrumar o img//
                         <img src={`https://cdn2.thedogapi.com/images/${cachorro.reference_image_id}.jpg`} alt={cachorro.name} className={styles.cardImage} />
                         <h3 className={styles.cardTitle}>{cachorro.name}</h3>
                         <div className={styles.cardText}>
