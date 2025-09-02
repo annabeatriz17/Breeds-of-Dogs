@@ -1,56 +1,89 @@
+/* Dogs.module.css padronizado com Home.module.css (azul) */
 .container {
-    background: pink;
-    padding: 20px;
-    text-align: center;
+  min-height: 100vh;
+  background: #e3f2fd;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #1976d2;
+  letter-spacing: 1px;
+  font-family: 'Comfortaa', cursive;
+  margin-bottom: 24px;
 }
 
 .button {
-    background: deeppink;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-    width: 180px;
-    height: 30%;
+  background: #1976d2;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-family: 'Comfortaa', cursive;
+  border: none;
+  margin: 12px 0;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #90caf9;
+  color: #1976d2;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
 }
 
 .cardContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 28px;
+  padding: 24px 0;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .card {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid #90caf9;
 }
 
 .cardTitle {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin: 16px 0 10px 0;
 }
 
 .cardImage {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e3f2fd;
+  border: 3px solid #1976d2;
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.18), 0 2px 8px rgba(0,0,0,0.10);
+  margin-bottom: 12px;
+  transition: transform 0.2s;
+}
+
+.cardImage:hover {
+  transform: scale(1.07);
 }
 
 .cardInfo {
-    margin: 5px 0;
-    color: #333;
+  margin: 8px 0;
+  color: #1565c0;
+  font-size: 1.05rem;
+  text-align: center;
 }
