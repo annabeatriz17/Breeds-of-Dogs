@@ -79,7 +79,7 @@
   height: 220px;
   object-fit: cover;
   background: #e3f2fd;
-  transition: transform 0.2s;
+  transition: transform 0.20s;
 }
 
 .avatar:hover {
@@ -175,4 +175,16 @@
   font-size: 1rem;
   font-family: 'Comfortaa', cursive;
   margin-top: auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.18), 0 2px 8px rgba(0,0,0,0.10);
+  padding: 40px 32px;
+  margin: 40px auto;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
