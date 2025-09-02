@@ -43,7 +43,7 @@ export default function Home() {
             </div>
 
             <footer className={styles.footer}>
-                <span>© 2025 Latido e Lambida • By Anna Beatriz</span>
+                <span>© 2025 Latido & Lambida • By Anna Beatriz</span>
             </footer>
         </div>
     );

@@ -37,10 +37,8 @@ export default function Home() {
                         <h3 className={styles.cardTitle}>{cachorro.name}</h3>
                         <div className={styles.cardText}>
                             <p className={styles.cardInfo}><strong>Grupo:</strong> {cachorro.breed_group || "N/A"}</p>
-                            <p className={styles.cardInfo}><strong>Origem:</strong> {cachorro.origin || "N/A"}</p>
-                            <p className={styles.cardInfo}><strong>Finalidade:</strong> {cachorro.bred_for || "N/A"}</p>
-                            <p className={styles.cardInfo}><strong>Expectativa de vida:</strong> {cachorro.life_span || "N/A"}</p>
-                            <p className={styles.cardInfo}><strong>Temperamento:</strong> {cachorro.temperament || "N/A"}</p>
+                            <p className={styles.cardInfo}><strong>Altura:</strong> {cachorro.height.metric} cm</p>
+                            <p className={styles.cardInfo}><strong>Peso:</strong> {cachorro.weight.metric} kg</p>
                         </div>
                     </div>
                 ))}
