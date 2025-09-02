@@ -12,7 +12,6 @@ export default function Home() {
         try {
             const response = await axios.get("https://api.thedogapi.com/v1/breeds");
             const data = response.data;
-            
             setCachorros(data);
         } catch (error) {
             console.error("Erro ao buscar os cães:", error);
@@ -26,26 +25,22 @@ export default function Home() {
             <div className={styles.card}>
                 <h1 className={styles.title}>Cachorros</h1>
                 <div className={styles.buttonContainer}>
-                    <div className={styles.buttonWrapper}>
-                        <button onClick={buscarCachorro} disable={loading} className={styles.button}>
-                            {loading ? "Carregando..." : "🔍Buscar Raças"}
-                        </button>
-                    </div>
+                    <button onClick={buscarCachorro} disabled={loading} className={styles.button}>
+                        {loading ? "Carregando..." : "🔍 Buscar Raças"}
+                    </button>
                 </div>
             </div>
-
             <div className={styles.cardContainer}>
                 {cachorros.map((cachorro) => (
-                    <div key={cachorro.id} className={styles.card}>
-                        <h3 className={styles.cardTitle}>{cachorro.name}</h3>
+                    <div key={cachorro.id} className={styles.cardDog}>
                         <img src={`https://cdn2.thedogapi.com/images/${cachorro.reference_image_id}.jpg`} alt={cachorro.name} className={styles.cardImage} />
+                        <h3 className={styles.cardTitle}>{cachorro.name}</h3>
                         <div className={styles.cardText}>
-                        <p className={styles.cardInfo}>Id: {cachorro.id}</p>
-                        <p className={styles.cardInfo}>Grupo: {cachorro.breed_group}</p>
-                        <p className={styles.cardInfo}>Origem: {cachorro.origin}</p>
-                        <p className={styles.cardInfo}>Finalidade: {cachorro.bred_for}</p>
-                        <p className={styles.cardInfo}>Expectativa de vida: {cachorro.life_span}</p>
-                        <p className={styles.cardInfo}>Temperamento: {cachorro.temperament}</p>
+                            <p className={styles.cardInfo}><strong>Grupo:</strong> {cachorro.breed_group || "N/A"}</p>
+                            <p className={styles.cardInfo}><strong>Origem:</strong> {cachorro.origin || "N/A"}</p>
+                            <p className={styles.cardInfo}><strong>Finalidade:</strong> {cachorro.bred_for || "N/A"}</p>
+                            <p className={styles.cardInfo}><strong>Expectativa de vida:</strong> {cachorro.life_span || "N/A"}</p>
+                            <p className={styles.cardInfo}><strong>Temperamento:</strong> {cachorro.temperament || "N/A"}</p>
                         </div>
                     </div>
                 ))}
