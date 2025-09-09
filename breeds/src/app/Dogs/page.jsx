@@ -24,16 +24,16 @@ export default function Home() {
     };
 
     const handleCardClick = (id) => {
-        router.push(`/Racas/${id}`); 
+        router.push(`/Dogs/${id}`); 
     };
 
     return (
         <div className={styles.container}>
             <div className={styles.card}>
-                <h1 className={styles.title}>Cachorros</h1>
+                <h1 className={styles.title}>Cachorros Cadastrados</h1>
                 <div className={styles.buttonContainer}>
                     <button onClick={buscarCachorro} disabled={loading} className={styles.button}>
-                        {loading ? "Carregando..." : "🔍 Buscar Raças"}
+                        {loading ? "Carregando..." : "🔍Buscar Cachorros"}
                     </button>
                 </div>
             </div>
