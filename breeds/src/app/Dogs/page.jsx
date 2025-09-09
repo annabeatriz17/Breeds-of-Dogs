@@ -3,12 +3,12 @@ import { useState } from "react";
 import axios from "axios";
 import styles from "../Dogs/Dogs.module.css";
 import Image from "next/image";
-import { useRouter } from "next/navigation"; 
+import { useRouter } from "next/navigation";
 
 export default function Home() {
     const [cachorros, setCachorros] = useState([]);
     const [loading, setLoading] = useState(false);
-    const router = useRouter(); 
+    const router = useRouter();
 
     const buscarCachorro = async () => {
         setLoading(true);
@@ -24,7 +24,7 @@ export default function Home() {
     };
 
     const handleCardClick = (id) => {
-        router.push(`/Dogs/${id}`); 
+        router.push(`/Dogs/${id}`);
     };
 
     return (
@@ -44,11 +44,11 @@ export default function Home() {
                         className={styles.cardDog}
                         onClick={() => handleCardClick(cachorro.id)}
                     >
-                        <Image 
+                        <Image
                             src={`https://cdn2.thedogapi.com/images/${cachorro.reference_image_id || "placeholder"}.jpg`}
-                            alt={cachorro.name} 
-                            className={styles.cardImage} 
-                            width={300} 
+                            alt={cachorro.name}
+                            className={styles.cardImage}
+                            width={300}
                             height={300}
                         />
                         <h3 className={styles.cardTitle}>{cachorro.name}</h3>
