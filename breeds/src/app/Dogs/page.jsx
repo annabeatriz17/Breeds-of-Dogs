@@ -29,7 +29,7 @@ export default function Home() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.card}>
+            <div className={styles.cards}>
                 <h1 className={styles.title}>Cachorros Cadastrados</h1>
                 <div className={styles.buttonContainer}>
                     <button onClick={buscarCachorro} disabled={loading} className={styles.button}>
@@ -37,7 +37,7 @@ export default function Home() {
                     </button>
                 </div>
             </div>
-            <div className={styles.cardContainer}>
+            <div className={styles.cardss}>
                 {cachorros.map((cachorro) => (
                     <div
                         key={cachorro.id}
