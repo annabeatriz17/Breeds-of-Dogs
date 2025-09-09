@@ -13,7 +13,6 @@ export default function Home() {
                 </div>
                 <nav className={styles.nav}>
                     <Link href="/Dogs" className={styles.navLink}>Cachorros</Link>
-                    <Link href="/Racas" className={styles.navLink}>Raças</Link>
                     <Link href="/Apiinfo" className={styles.navLink}>Informações</Link>
                 </nav>
             </header>
@@ -21,14 +20,14 @@ export default function Home() {
             <div className={styles.card}>
                 <section className={styles.profile}>
                     <div className={styles.profileimage}>
-                        <Image src="/images/eu.jpg" alt="Cachorro feliz" width={220} height={220} className={styles.avatar} />
+                        <Image src="/images/eu.jpg" alt="foto de perfil" width={220} height={220} className={styles.avatar} />
                     </div>
                     <div className={styles.profiletext}>
                         <h2 className={styles.profiletitle}>Descubra tudo sobre raças de cachorros!</h2>
                         <p className={styles.profileSubtitle}>
                             Curiosidades, informações, dicas e muito mais para quem ama cães. Navegue, aprenda e compartilhe o amor pelos peludos!
                         </p>
-                        <Link href="/Dogs" className={styles.profileButton}>Explorar Raças</Link>
+                        <Link href="/Dogs" className={styles.profileButton}>Explorar Cachorros</Link>
                     </div>
                 </section>
                 <section className={styles.infocontainer}>

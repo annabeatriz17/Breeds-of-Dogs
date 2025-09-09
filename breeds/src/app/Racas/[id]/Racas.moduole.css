@@ -1,0 +1,28 @@
+.container {
+  padding: 32px;
+  background: #e3f2fd;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #1976d2;
+  margin-bottom: 24px;
+  font-family: 'Comfortaa', cursive;
+}
+
+.image {
+  border-radius: 16px;
+  border: 3px solid #1976d2;
+  margin-bottom: 24px;
+}
+
+.info {
+  font-size: 1.2rem;
+  color: #1565c0;
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+}

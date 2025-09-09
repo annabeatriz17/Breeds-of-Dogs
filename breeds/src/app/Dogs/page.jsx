@@ -2,10 +2,13 @@
 import { useState } from "react";
 import axios from "axios";
 import styles from "../Dogs/Dogs.module.css";
+import Image from "next/image";
+import { useRouter } from "next/navigation"; 
 
 export default function Home() {
     const [cachorros, setCachorros] = useState([]);
     const [loading, setLoading] = useState(false);
+    const router = useRouter(); 
 
     const buscarCachorro = async () => {
         setLoading(true);
@@ -20,6 +23,10 @@ export default function Home() {
         }
     };
 
+    const handleCardClick = (id) => {
+        router.push(`/Racas/${id}`); 
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.card}>
@@ -32,9 +39,18 @@ export default function Home() {
             </div>
             <div className={styles.cardContainer}>
                 {cachorros.map((cachorro) => (
-                    <div key={cachorro.id} className={styles.cardDog}>
-                        //arrumar o img//
-                        <img src={`https://cdn2.thedogapi.com/images/${cachorro.reference_image_id}.jpg`} alt={cachorro.name} className={styles.cardImage} />
+                    <div
+                        key={cachorro.id}
+                        className={styles.cardDog}
+                        onClick={() => handleCardClick(cachorro.id)}
+                    >
+                        <Image 
+                            src={`https://cdn2.thedogapi.com/images/${cachorro.reference_image_id || "placeholder"}.jpg`}
+                            alt={cachorro.name} 
+                            className={styles.cardImage} 
+                            width={300} 
+                            height={300}
+                        />
                         <h3 className={styles.cardTitle}>{cachorro.name}</h3>
                         <div className={styles.cardText}>
                             <p className={styles.cardInfo}><strong>Grupo:</strong> {cachorro.breed_group || "N/A"}</p>
