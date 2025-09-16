@@ -1,27 +1,29 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import styles from "../Dogs/Dogs.module.css";
+import styles from "./Dogs.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
     const [cachorros, setCachorros] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const router = useRouter();
 
-    const buscarCachorro = async () => {
-        setLoading(true);
-        try {
-            const response = await axios.get("https://api.thedogapi.com/v1/breeds");
-            const data = response.data;
-            setCachorros(data);
-        } catch (error) {
-            console.error("Erro ao buscar os cães:", error);
-        } finally {
-            setLoading(false);
-        }
-    };
+    useEffect(() => {
+        const buscarCachorro = async () => {
+            try {
+                const response = await axios.get("https://api.thedogapi.com/v1/breeds");
+                const data = response.data;
+                setCachorros(data);
+            } catch (error) {
+                console.error("Erro ao buscar os cães:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        buscarCachorro();
+    }, []);
 
     const handleCardClick = (id) => {
         router.push(`/Dogs/${id}`);
@@ -29,36 +31,35 @@ export default function Home() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.cards}>
+            <div className={styles.card}>
                 <h1 className={styles.title}>Cachorros Cadastrados</h1>
-                <div className={styles.buttonContainer}>
-                    <button onClick={buscarCachorro} disabled={loading} className={styles.button}>
-                        {loading ? "Carregando..." : "🔍Buscar Cachorros"}
-                    </button>
-                </div>
             </div>
             <div className={styles.cardss}>
-                {cachorros.map((cachorro) => (
-                    <div
-                        key={cachorro.id}
-                        className={styles.cardDog}
-                        onClick={() => handleCardClick(cachorro.id)}
-                    >
-                        <Image
-                            src={`https://cdn2.thedogapi.com/images/${cachorro.reference_image_id || "placeholder"}.jpg`}
-                            alt={cachorro.name}
-                            className={styles.cardImage}
-                            width={300}
-                            height={300}
-                        />
-                        <h3 className={styles.cardTitle}>{cachorro.name}</h3>
-                        <div className={styles.cardText}>
-                            <p className={styles.cardInfo}><strong>Grupo:</strong> {cachorro.breed_group || "N/A"}</p>
-                            <p className={styles.cardInfo}><strong>Altura:</strong> {cachorro.height.metric} cm</p>
-                            <p className={styles.cardInfo}><strong>Peso:</strong> {cachorro.weight.metric} kg</p>
+                {loading ? (
+                    <p>Carregando...</p>
+                ) : (
+                    cachorros.map((cachorro) => (
+                        <div
+                            key={cachorro.id}
+                            className={styles.cardDog}
+                            onClick={() => handleCardClick(cachorro.id)}
+                        >
+                            <Image
+                                src={`https://cdn2.thedogapi.com/images/${cachorro.reference_image_id || "placeholder"}.jpg`}
+                                alt={cachorro.name}
+                                className={styles.cardImage}
+                                width={300}
+                                height={300}
+                            />
+                            <h3 className={styles.cardTitle}>{cachorro.name}</h3>
+                            <div className={styles.cardText}>
+                                <p className={styles.cardInfo}><strong>Grupo:</strong> {cachorro.breed_group || "N/A"}</p>
+                                <p className={styles.cardInfo}><strong>Altura:</strong> {cachorro.height.metric} cm</p>
+                                <p className={styles.cardInfo}><strong>Peso:</strong> {cachorro.weight.metric} kg</p>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))
+                )}
             </div>
         </div>
     )
