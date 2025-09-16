@@ -1,11 +1,13 @@
 "use client";
+import Header from "../components/Header";
 import styles from "./Perfil.module.css"
+import Image from "next/image";
 
 export default function Perfil() {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>Bem vindo ao meu perfil</h1>
+            <Header />
         </div>
     )
 }

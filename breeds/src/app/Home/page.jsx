@@ -2,20 +2,12 @@
 import styles from "./Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import Header from "../components/Header";
 
 export default function Home() {
     return (
         <div className={styles.container}>
-            <header className={styles.header}>
-                <div className={styles.containerheader}>
-                    <h1 className={styles.title}>Latido e Lambida</h1>
-                    <Image src="/icon/faviconn.ico" alt="Latido e Lambida" width={40} height={40} />
-                </div>
-                <nav className={styles.nav}>
-                    <Link href="/Dogs" className={styles.navLink}>Cachorros</Link>
-                    <Link href="/Apiinfo" className={styles.navLink}>Informações</Link>
-                </nav>
-            </header>
+            <Header />
             
             <div className={styles.card}>
                 <section className={styles.profile}>
