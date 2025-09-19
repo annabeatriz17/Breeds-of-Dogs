@@ -7,6 +7,7 @@ import Link from "next/link";
 import axios from "axios";
 import styles from "./[id].module.css";
 import DogDetailsCard from "../../components/DogCardDetails";
+import Footer from "../../components/Footer";
 
 export default function DogDetails({ params }) {
     const [cachorro, setCachorro] = useState(null);
@@ -70,6 +71,7 @@ export default function DogDetails({ params }) {
             </div>
 
             <DogDetailsCard cachorro={cachorro} />
+            <Footer />
         </div>
     );
 }

@@ -1,5 +1,6 @@
 "use client";
 import styles from "./Apiinfo.module.css";
+import Footer from "../components/Footer";
 
 export default function ApiInfo() {
   return (
@@ -38,6 +39,8 @@ export default function ApiInfo() {
         <strong>Descrição:</strong><br />
         A <b>The Dog API</b> disponibiliza informações detalhadas sobre raças de cachorros, incluindo nome, grupo, origem, finalidade, expectativa de vida, temperamento, altura, peso e imagens. É ideal para projetos que precisam exibir ou pesquisar dados sobre cães.
       </p>
+
+      <Footer />
     </div>
   );
 }

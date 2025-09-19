@@ -4,6 +4,7 @@ import axios from "axios";
 import styles from "./Dogs.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Footer from "../components/Footer";
 
 export default function Home() {
     const [cachorros, setCachorros] = useState([]);
@@ -61,6 +62,7 @@ export default function Home() {
                     ))
                 )}
             </div>
+            <Footer />
         </div>
     )
 }
