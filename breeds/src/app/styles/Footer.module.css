@@ -1,0 +1,22 @@
+.container {
+    min-height: 100vh;
+    background-color: #ff862f;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    width: 100%;
+    background:  #ffd699;
+    color: #fff;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 1rem;
+    font-family: 'Comfortaa', cursive;
+    margin-top: auto;
+}
+
+.text {
+    font-size: 1rem;
+    color: #000000;
+}

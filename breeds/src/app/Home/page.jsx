@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Home() {
     return (
@@ -32,10 +33,9 @@ export default function Home() {
                     </blockquote>
                 </section>
             </div>
+            <Footer />
 
-            <footer className={styles.footer}>
-                <span>© 2025 Latido & Lambida • By Anna Beatriz</span>
-            </footer>
+            
         </div>
     );
 }
