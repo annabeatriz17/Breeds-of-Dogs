@@ -5,7 +5,7 @@ export default function Header() {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <Image src="/icon/faviconn.ico" alt="Latido e Lambida" width={90} height={90} />
+                <Image src="/icon/faviconn.ico" alt="Latido e Lambida" width={70} height={70} />
                 <h1 className={styles.title}>Latido & Lambida</h1>
             </div>
             <nav className={styles.nav}>
