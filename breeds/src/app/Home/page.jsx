@@ -23,20 +23,23 @@ export default function Home() {
             </div>
             <div className={styles.section}>
                 <p className={styles.subtitle}>VEJA AS FOFURAS</p>
-                <h2 className={styles.sectionTitle}>Que temos por aqui!</h2>
-                <p className={styles.sectionDescription}>
-                    Adoção de "Latido & Lambida. Aqui você encontra o carinho - ideal para quando você precisa viajar.
+                <h2 className={styles.subtitle2}>Que temos por aqui!</h2>
+                <p className={styles.description2}>
+                    Aqui na Latido & Lambida Aqui você encontra cachorros hospedados com todo carinho - ideal para quando você precisa viajar. Explore os nossos hóspedes e descubra tudo sobre eles - veja como podemos cuidar do seu melhor amigo também!
                 </p>
                 
-                <div className={styles.dogs}>
-                    <Image src="/images/dog1.png" alt="Dog 1" width={100} height={100} />
-                    <Image src="/images/dog2.png" alt="Dog 2" width={100} height={100} />
-                    <Image src="/images/dog3.png" alt="Dog 3" width={100} height={100} />
-                    <Image src="/images/dog4.png" alt="Dog 4" width={100} height={100} />
-                    <Image src="/images/dog5.png" alt="Dog 5" width={100} height={100} />
-                    <Image src="/images/dog6.png" alt="Dog 6" width={100} height={100} />
+                <div className={styles.dogssection}>
+                    <div className={styles.dogs}>
+                        <Image src="/images/dog1.png" alt="Dog 1" width={200} height={200} />
+                        <Image src="/images/dog2.png" alt="Dog 2" width={200} height={200} />
+                        <Image src="/images/dog3.png" alt="Dog 3" width={200} height={200} />
+                        <Image src="/images/dog4.png" alt="Dog 4" width={200} height={200} />
+                        <Image src="/images/dog5.png" alt="Dog 5" width={200} height={200} />
+                        <Image src="/images/dog6.png" alt="Dog 6" width={200} height={200} />
+                    </div>
                 </div>
             </div>
+            <button className={styles.button}>VER TODOS OS CACHORROS</button>
             
             <Footer />
         </div>
