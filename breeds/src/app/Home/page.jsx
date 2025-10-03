@@ -39,7 +39,14 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <button className={styles.button}>VER TODOS OS CACHORROS</button>
+            <a href="/Dogs" style={styles.link}>
+                <button className={styles.button}>
+                    <span className={styles.buttonimg}>
+                        <Image src="/images/osso2.png" alt="Osso de cachorro" width={40} height={40} />
+                    </span>
+                    Ver Cachorros
+                </button>
+            </a>
             
             <Footer />
         </div>

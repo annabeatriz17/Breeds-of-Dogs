@@ -10,8 +10,8 @@ export default function Header() {
             </div>
             <nav className={styles.nav}>
                 <a href="/Perfil" className={styles.navLink}>Perfil</a>
+                                <a href="/Dogs" className={styles.navLink}>Cachorros</a>
                 <a href="/Apiinfo" className={styles.navLink}>Api</a>
-                <a href="/Dogs" className={styles.navLink}>Listagem</a>
                 <a href="/Breeds" className={styles.navLink}>Detalhes</a>
                 <a href="/Contact" className={styles.navLink}>Contato</a>
             </nav>
