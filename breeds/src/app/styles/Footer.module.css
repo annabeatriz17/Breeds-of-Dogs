@@ -1,20 +1,15 @@
 .container {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer {
     width: 100%;
-    background:  #ffd699;
-    color: #fff;
+    background: #ffd699;
     text-align: center;
-    padding: 24px 0;
-    font-size: 1rem;
-    font-family: 'Comfortaa', cursive;
+    padding: 20px 12px;
+    font-size: 0.95rem;
     margin-top: auto;
+    border-top: 2px solid #ff862f;
 }
 
 .text {
     font-size: 1rem;
-    color: #000000;
+    color: #6b4000;
+    font-weight: 500;
 }
