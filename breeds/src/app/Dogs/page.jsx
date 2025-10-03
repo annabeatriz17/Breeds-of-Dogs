@@ -4,6 +4,7 @@ import axios from "axios";
 import styles from "./Dogs.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -32,7 +33,8 @@ export default function Home() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.card}>
+            <Header />
+            <div className={styles.content}>
                 <h1 className={styles.title}>Cachorros Cadastrados</h1>
             </div>
             <div className={styles.cardss}>
