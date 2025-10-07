@@ -1,35 +1,20 @@
-.apiContainer {
-  max-width: 700px;
-  margin: 40px auto;
-  background: linear-gradient(135deg, #ffd699 0%, #ff862f 100%);
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(255, 134, 47, 0.10);
-  padding: 40px 32px;
-  font-family: 'Comfortaa', cursive;
-  color: #6b4000;
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.apiTitle {
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 1rem;
   color: #ff862f;
-  font-size: 2rem;
-  margin-bottom: 18px;
 }
 
-.apiLink {
-  color: #ff862f;
-  text-decoration: underline;
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
-.apiCode {
-  background: #ffd699;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 1rem;
-  color: #6b4000;
-}
-
-.apiList {
-  margin-top: 8px;
-  margin-bottom: 18px;
-  padding-left: 18px;
-}
