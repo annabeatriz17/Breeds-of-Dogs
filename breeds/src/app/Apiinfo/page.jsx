@@ -8,6 +8,7 @@ export default function ApiInfo() {
       <h1 className={styles.apiTitle}>
         API escolhida: The Dog API
       </h1>
+      
       <p>
         <strong>Documentação oficial:</strong>{" "}
         <a href="https://thedogapi.com/" target="_blank" rel="noopener noreferrer" className={styles.apiLink}>
