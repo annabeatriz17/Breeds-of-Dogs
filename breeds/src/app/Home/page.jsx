@@ -41,9 +41,7 @@ export default function Home() {
             </div>
             <a href="/Dogs" style={styles.link}>
                 <button className={styles.button}>
-                    <span className={styles.buttonimg}>
-                        <Image src="/images/osso2.png" alt="Osso de cachorro" width={40} height={40} />
-                    </span>
+                    <Image src="/images/osso2.png" alt="Osso de cachorro" width={40} height={40} />
                     Ver Cachorros
                 </button>
             </a>
